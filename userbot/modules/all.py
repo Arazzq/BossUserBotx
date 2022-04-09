@@ -50,7 +50,7 @@ async def _(q):
 
 
 CmdHelp("all").add_command(
-	"all", "<sebep>", "Gruptaki Üyeleri Etiketler.. En Fazla 3000 Kişi (Flood Wait Nedeniyle)"
+	"all", "<sebep>", "Araz Ramazanda zinaya yox deyir.. En Fazla 3000 Kişi (Flood Wait Nedeniyle)"
 	).add_command(
 	"alladmin", "<sebep>", "Gruptaki Adminleri Etiketler "
         ).add_command(
