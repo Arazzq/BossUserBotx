@@ -18,7 +18,7 @@ LANG = get_value("auto")
 async def auto(event):
     metod = event.pattern_match.group(1).lower()
     
-    if str(metod) != "isim" and str(metod) != "bio" and str(metod) != "pp":
+    if str(metod) != "ad" and str(metod) != "bio" and str(metod) != "pp":
         await event.edit(LANG['INVALID_TYPE'])
         return
 
@@ -27,7 +27,7 @@ async def auto(event):
         return
 
     await event.edit(LANG['SETTING'] % metod)
-    if metod == "isim":
+    if metod == "ad":
         HM = time.strftime("%H:%M")
 
         await event.client(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
@@ -118,5 +118,5 @@ async def get_font_file(client, channel_id):
     return await client.download_media(font_file_message)
 
 CmdHelp('auto').add_command(
-    'auto', 'isim ,pp ya da bio', 'Otomatik saate göre Değişir', '.auto isim(isminiz değil "isim" Kelimesi)'
+    'auto', 'ad ,pp ya da bio', 'Otomatik saata görə Dəyişir', '.auto ad(adınız deyil "ad" söz)'
 ).add()
