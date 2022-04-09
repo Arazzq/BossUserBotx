@@ -201,6 +201,6 @@ async def anti_spambot(welcm):
 CMD_HELP.update({
     'anti_spambot':
     "Kullanım: Bu modül config.env dosyasında ya da env değeri ile etkinleştirilmişse,\
-        \neğer bu spamcılar UserBot'un anti-spam algoritmasıyla eşleşiyorsa, \
+        \neğer bu spamcılar UserBot'un anti-spam algoritmasıyla eşrsa, \
         \nbu modül gruptaki spamcıları gruptan yasaklar (ya da adminlere bilgi verir)."
 })
