@@ -28,10 +28,10 @@ LANG = get_value("__plugin")
 @register(outgoing=True, pattern="^.ma[gğ]aza ?(.*)")
 async def magaza(event):
     plugin = event.pattern_match.group(1)
-    await event.edit('** Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`🔎 Plugin\'i Getiriyorum, Lütfen Bekle!`')
+    await event.edit('** Boss Plugin Mağazası**\n__Versiya 0.1__\n\n`🔎 Plugin\'i Gətirirəm, Xahiş Gözlə!`')
     split = plugin.split()
     if plugin == '':
-        plugin = 'Son Yüklenen'
+        plugin = 'Son Yüklənən'
         plugins = await event.client.get_messages(STORECHANNEL, limit=15, filter=InputMessagesFilterDocument)
     elif len(split) >= 1 and (split[0] == 'random' or split[0] == 'rastgele'):
         plugin = 'Rastgele'
@@ -43,10 +43,10 @@ async def magaza(event):
         random = choice(random)
         random_file = random.file.name
 
-    result = f'**✨Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**🔎 Veriler:** `{plugin}`\n**🔢 Sonuç: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
+    result = f'**✨Boss Plugin Mağazası**\n__Versiya 0.1__\n\n**🔎 data:** `{plugin}`\n**🔢 Nəticə: __({len(plugins)})__**\n➖➖➖➖➖\n\n'
     
     if len(plugins) == 0:
-        result += f'**Bu İsimde Plugin Bulamadım...**\n`{random_file}` __Bu plugini Denemek İster Misin ?__'
+        result += f'**Bu İsimde Plugin Bulamadım...**\n`{random_file}` __Bu plugini Sınamaq İstəyərsən ?__'
     else:
         for plugin in plugins:
             plugin_lines = plugin.raw_text.splitlines()
@@ -55,7 +55,7 @@ async def magaza(event):
                 result += f'__{plugin_lines[2]}__'
             else:
                 result += f'__{plugin_lines[2][:50]}...__'
-            result += f'\n**ℹ️ Yüklemek için:** `{PATTERNS[:1]}sinstall {plugin.id}`\n➖➖➖➖➖\n'
+            result += f'\n**ℹ️ Yükləmək üçün:** `{PATTERNS[:1]}sinstall {plugin.id}`\n➖➖➖➖➖\n'
     return await event.edit(result)
 
 # Plugin Mağazası
@@ -66,13 +66,13 @@ async def sinstall(event):
     try:
         plugin = int(plugin)
     except:
-        return await event.edit('**Mia Plugin Mağazası**\n__Versiyon 1.0__\n\n**⚠️ Hata:** `Lütfen Sadece Sayı Yazınız.. Örneğin: .sinstall 2`')
+        return await event.edit('**Boss Plugin Mağazası**\n__Versiya 1.0__\n\n**⚠️ Xəta:** `Xahiş Sadəcə sayı Yazın.. Nümunə: .sinstall 2`')
     
-    await event.edit('**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`🔎 Plugin\'i Getiriyorum...`')
+    await event.edit('**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n`🔎 Plugin\'i Gətirirəm...`')
     plugin = await event.client.get_messages(STORECHANNEL, ids=plugin)
-    await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} Plugini Getirildi!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit(f'**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n`✅ {plugin.file.name} Plugini Gətirildi!`\n`⬇️ Plugini Yüklüyürəm... Gözləyin.`')
     dosya = await plugin.download_media('./userbot/modules/')
-    await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n`✅ {plugin.file.name} indirme başarılı!`\n`⬇️ Plugini Yüklüyorum... Bekleyin.`')
+    await event.edit(f'**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n`✅ {plugin.file.name} Endirme Uğurlu!`\n`⬇️ Plugini Yüklüyürəm... Gözləyin.`')
     
     try:
         spec = importlib.util.spec_from_file_location(dosya, dosya)
@@ -80,7 +80,7 @@ async def sinstall(event):
         spec.loader.exec_module(mod)
     except Exception as e:
         os.remove("./userbot/modules/" + dosya)
-        return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**⚠️ Hata:** `Plugin Hatalı. {e}`\n**LÜTFEN BUNU ADMİNLERE BİLDİRİN!**')
+        return await event.edit(f'**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n**⚠️ Xəta:** `Plugin Xətalı. {e}`\n**Xahiş bu xətanı UserBotun adminlərinə bildirin!**')
 
     dosy = open(dosya, "r").read()
     if re.search(r"@tgbot\.on\(.*pattern=(r|)\".*\".*\)", dosy):
@@ -100,26 +100,26 @@ async def sinstall(event):
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Modül Başarıyla Yüklendi!**\n__Modülün Kullanımı İçin__ `.mia {cmdhelp}` __Yazın.__')
+                return await event.edit(f'**Modul Uğurla Yükləndi!**\n__Modulun İşlədilişi Üçün__ `.boss {cmdhelp}` __Yazın.__')
             else:
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                userbot.cmdhelp.CmdHelp(dosya).add_warning('Komutlar bulunamadı!').add()
+                userbot.cmdhelp.CmdHelp(dosya).add_warning('Əmrlər tapılmadı!').add()
                 return await event.edit(LANG['PLUGIN_DESCLESS'])
         else:
             if re.search(r'CmdHelp\(.*\)', dosy):
                 cmdhelp = re.findall(r"CmdHelp\([\"'](.*)[\"']\)", dosy)[0]
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.mia {cmdhelp}` __Yazınız.__')
+                return await event.edit(f'**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n**✅ Modul Uğurla Yükləndi!**\n__ℹ️ Modulun İşlədilişini Öyrənmək Üçün__ `.bos {cmdhelp}` __Yazın.__')
             else:
                 dosyaAdi = plugin.file.name.replace('.py', '')
                 extractCommands(dosya)
                 await plugin.forward_to(PLUGIN_CHANNEL_ID)
-                return await event.edit(f'**Mia Plugin Mağazası**\n__Versiyon 0.1__\n\n**✅ Modül Başarıyla Yüklendi!**\n__ℹ️ Modülün Kullanımını Öğrenmek İçin__ `.mia {dosyaAdi}` __Yazınız.__')
+                return await event.edit(f'**Boss Plugin Mağazası**\n__Versiya 0.1__\n\n**✅ Modul Uğurla Yükləndi!**\n__ℹ️ Modulun İşlədilişini Öyrənmək Üçün__ `.boss {dosyaAdi}` __Yazın.__')
 
 userbot.cmdhelp.CmdHelp('store').add_command(
-    'store', '<kelime>', 'Plugin kanalına son atılan Pluginleri getirir. Eğer kelime yazarsanız onu kanalda arar.'
+    'store', '<kelime>', 'Plugin kanalına son atılan Pluginləri gətirir. Əgər plugin adı yazarsanız onu kanalda axtarar.'
 ).add_command(
-    'store random', '<say>', 'Plugin kanalından random plugin getirir.', 'store random 10'
+    'store random', '<say>', 'Plugin kanalından random plugin gətirir.', 'store random 10'
 ).add_command(
-    'sinstall', '<say>', 'Plugin kanalından direkt olarak Plugini yükler.'
+    'sinstall', '<say>', 'Plugin kanalından  Plugini yüklüyər.'
 ).add()
