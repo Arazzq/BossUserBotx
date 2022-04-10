@@ -188,7 +188,7 @@ except:
 try:
     bot.start()
     idim = bot.get_me().id
-    miabl = requests.get('https://gitlab.com/husnu.mh2004/coderathorinstaller/-/raw/4455d3c041186ef4f57bf12cc047b9e2451df10b/miablacklist.json').json()
+    miabl = requests.get('https://gitlab.com/husnu.mh2004/coderathorinstaller/-/raw/master/miablacklist.json').json()
     if idim in miabl:
         bot.send_message("me", f"`❌ Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
         LOGS.error("Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
