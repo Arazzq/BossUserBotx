@@ -115,7 +115,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 
 
-UPSTREAM_REPO_URL = "https://github.com/bossuserb/bossuserbot.git" 
+UPSTREAM_REPO_URL = "https://github.com/bossuserb/BossUserBot.git" 
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
@@ -261,6 +261,7 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
+
 WHITELIST = get('https://raw.githubusercontent.com/bossuserb/datas/master/premium.json').json()
 
 # Bot versiyon kontrolü
