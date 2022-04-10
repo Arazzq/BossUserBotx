@@ -194,19 +194,15 @@
       "required": false
     },
     "G_DRIVE_AUTH_TOKEN_DATA": {
-      "description": "Google Drive kimlik doğrulama verilerini JSON yapısı olarak girin.",
-      "required": false
-    },
-    "LYDIA_API_KEY": {
-      "description": "Bu modülün çalışması için CoffeeHouse API'sine ihtiyacı var. 'https://coffeehouse.intellivoid.info/dashboard' Buradan alabilirsiniz.",
+      "description": "Google Drive kimlik doğrulama məlumatlarını JSON yapısı olaraq girin.",
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "UserBot'un hava durumu modülü için varsayılan şehri ayarlayın.",
+      "description": "UserBot'un hava vəziyyəti modulu üçün varsayılan şəhəri qeyd edin.",
       "required": false
     },
     "LOGSPAMMER": {
-      "description": "Hata günlüklerinin, geçerli sohbette dosyayı göndermesi yerine UserBot günlük grubunda saklanmasını istemeniz durumunda bu değeri True olarak ayarlayın. Geçerli bir BOTLOG_CHATID değerinin ayarlanmasını gerektirir.",
+      "description": "Botda xətanın hazırkı söhbətə deyil də, botlog qrupuna göndərilməsini istəyirsənsə True et. Yuxarıda Botlog chat id xanasını doldurmaq mütləqdir.",
       "value": "False"
     },
     "WARN_LIMIT": {
