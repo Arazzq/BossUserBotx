@@ -270,12 +270,12 @@ PATTERNS = os.environ.get("PATTERNS", ".;,")
 TRY = 0
 
 while TRY < 6:
-    _WHITELIST = get('https://github.com/bossuserb/datas/blob/master/premium.json')
+    _WHITELIST = get('https://github.com/bossuserb/datas/blob/master/whitelist.json')
     if _WHITELIST.status_code != 200:
         if TRY != 5:
             continue
         else:
-            WHITELIST = ["1199775567", "5108008233"]
+            WHITELIST = ["1199775567, 5108008233"]
             break
     WHITELIST = _WHITELIST.json()
     break
