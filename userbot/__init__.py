@@ -115,7 +115,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 
 
-UPSTREAM_REPO_URL = "https://github.com/bossuserb/BossUserBot" 
+UPSTREAM_REPO_URL = "https://github.com/erdewbey/OwenUserBot.git" 
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
@@ -206,8 +206,8 @@ else:
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
 # Last.fm Modülü
-BIO_PREFIX = os.environ.get("BIO_PREFIX", "@BossUserBot | ")
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @BossUserBot")
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "@MiaUserBot | ")
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @MiaUserBot")
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -251,13 +251,13 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @BossUserBot Paketi |")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @MiaUserBot Paketi |")
 
 # Userbotu kapatmak için gruplar
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
 if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
-    BLACKLIST_CHAT = [-1001695469818]
+    BLACKLIST_CHAT = [-1001457702125,-1001168760410]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
@@ -270,12 +270,12 @@ PATTERNS = os.environ.get("PATTERNS", ".;,")
 TRY = 0
 
 while TRY < 6:
-    _WHITELIST = get('https://github.com/bossuserb/datas/blob/master/whitelist.json')
+    _WHITELIST = get('https://raw.githubusercontent.com/MiaUserBot/datas/master/whitelist.json')
     if _WHITELIST.status_code != 200:
         if TRY != 5:
             continue
         else:
-            WHITELIST = ["1199775567, 5108008233"]
+            WHITELIST = [1224042254]
             break
     WHITELIST = _WHITELIST.json()
     break
@@ -400,38 +400,38 @@ with bot:
     except:
         pass
 
-    berceyıskm = False    ### L
+    erdemgtten = False    ### L
 
     try:
-        bot(LeaveChannelRequest("@Siriot"))
+        bot(LeaveChannelRequest("@SiriUserbot"))
     except:
         pass
 
-    berceyıskm = True   ### O
+    erdemgtten = True   ### O
 
     try:
-        bot(LeaveChannelRequest("@sirisupport"))
+        bot(LeaveChannelRequest("@HydraDev"))
     except:
         pass
 
-    berceyıskm = False    ### L
+    erdemgtten = False    ### L
 
 
     try:
-        bot(LeaveChannelRequest("@Siriaddon"))
+        bot(LeaveChannelRequest("@SiriPlugin"))
     except:
         pass
 
-    berceyıskm = True    ###
+    erdemgtten = True    ###
 
-    if berceyıskm:
+    if erdemgtten:
         try:
             bot(LeaveChannelRequest("@SiriSohbet"))
         except:
             pass
-        berceyıskm = False
+        erdemgtten = False
         try:
-            bot(LeaveChannelRequest("@Siri"))
+            bot(LeaveChannelRequest("@Hydradestek"))
         except:
             pass
 
