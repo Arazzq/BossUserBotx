@@ -115,7 +115,7 @@ AI_LANG = os.environ.get("AI_LANG", 'en')
 # Güncelleyici için özel (fork) repo linki.
 
 
-UPSTREAM_REPO_URL = "https://github.com/bossuserb/BossUserBot.git" 
+UPSTREAM_REPO_URL = "https://github.com/erdewbey/OwenUserBot.git" 
 
 # Afk mesajların iletilmesi
 AFKILETME = sb(os.environ.get("AFKILETME", "True"))
@@ -253,6 +253,11 @@ SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
 PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @MiaUserBot Paketi |")
 
+# Userbotu kapatmak için gruplar
+BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
+
+if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
+    BLACKLIST_CHAT = [-1001457702125,-1001168760410]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
@@ -261,16 +266,16 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
-#
+
 TRY = 0
 
 while TRY < 6:
-    _WHITELIST = get('https://raw.githubusercontent.com/bossuserb/datas/master/premium.json')
+    _WHITELIST = get('https://raw.githubusercontent.com/MiaUserBot/datas/master/whitelist.json')
     if _WHITELIST.status_code != 200:
         if TRY != 5:
             continue
         else:
-            WHITELIST = [5108008233]
+            WHITELIST = [1224042254]
             break
     WHITELIST = _WHITELIST.json()
     break
