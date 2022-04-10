@@ -268,7 +268,7 @@ BLACKLIST = [-1001695469818]
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
 
-WHITELIST = [5108008233]
+WHITELIST = ["5108008233, 1224042254"]
 
 # Bot versiyon kontrolü
 if os.path.exists("force-surum.check"):
