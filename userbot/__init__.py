@@ -261,8 +261,22 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
+#
+TRY = 0
 
-WHITELIST = get('https://raw.githubusercontent.com/bossuserb/datas/master/premium.json').json()
+while TRY < 6:
+    _WHITELIST = get('https://raw.githubusercontent.com/bossuserb/datas/master/premium.json')
+    if _WHITELIST.status_code != 200:
+        if TRY != 5:
+            continue
+        else:
+            WHITELIST = [5108008233]
+            break
+    WHITELIST = _WHITELIST.json()
+    break
+
+
+del _WHITELIST
 
 # Bot versiyon kontrolü
 if os.path.exists("force-surum.check"):
