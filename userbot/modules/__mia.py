@@ -12,9 +12,9 @@ LANG = get_value("__mia")
 
 # ████████████████████████████████ #
 
-@register(outgoing=True, pattern="^.[Mm]ia(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Bb]ss(?: |$)(.*)")
 async def siri(event):
-    """ .mia komutun """
+    """ .boss əmrin """
     args = event.pattern_match.group(1).lower()
     if args:
         if args in CMD_HELP:
