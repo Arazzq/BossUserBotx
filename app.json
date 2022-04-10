@@ -96,11 +96,11 @@
       "value": "True"
     },
     "BOT_USERNAME": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun kullanıcı adınız yazmanız lazım (Örnek: @SiriBot). Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özəlliyinin işləməsi üçün vacibdir. Buraya botunuzun kullanıcı adınız yazmanız lazımdır (Nümunə: @EliteGameBot). Botunuz yoxdusa  @BotFather köməyi ilə bot yarada bilərsiniz.",
       "required": false  
     },
     "BOT_TOKEN": {
-      "description": "Inline bot özelliğinin çalışması için gereklidir. Buraya botunuzun tokenini yazmanız lazım. Botunuz yok ise @BotFather yardımı ile bot oluşturabilirsiniz.",
+      "description": "Inline bot özəlliyinin işləməsi üçün vacibdir. Buraya botunuzun tokenini yazmanız lazımdır. Botunuz yoxdusa @BotFather köməyi ilə bot yarada bilərsiniz.",
       "required": false    
     },
     "GENIUS": {
@@ -108,19 +108,19 @@
       "required": false
     },
     "AUTO_PP": {
-      "description": "Autopp modülünün çalışması için gerekli olan değişkendir. Çalışması için kullanacağınız resmin direk adresini girmeniz gerekiyor.",
+      "description": "Autopp modulunun işləməsi üçün vacib olan dəyişkəndir. İşləməsi üçün işlədəcəyiniz rəsmin  adresini girməniz lazımdır.",
       "required": false      
     },
     "BOTLOG_CHATID": {
-      "description": "Günlük grubunun ChatID'si. BOTLOG= False ve / veya LOGSPAMMER= False ise '0' olarak ayarlayın.",
+      "description": "Günlük qrupunun ChatID'si. BOTLOG= False ve / vəya LOGSPAMMER= False isə '0' olaraq ayarlayın.",
       "value": "0"
     },
     "CONSOLE_LOGGER_VERBOSE": {
-      "description": "Konsol günlüğünde ayrıntıya ihtiyacınız varsa, bunu True olarak ayarlayın.",
+      "description": "Konsol günlüyündə fikirə Ehtiyacınız varsa, bunu True olaraq ayarlayın.",
       "value": "False"
     },
     "PM_AUTO_BAN": {
-      "description": "PM Otomatik Yasaklama Özelliği. 'Hey! Bu bir bot.' modülüdür.",
+      "description": "PM Otomatik Qadağan eləmək Özəlliyi. 'Hey! Bu bir bot.' moduludur.",
       "value": "False"
     },
     "PM_AUTO_BAN_LIMIT": {
@@ -181,16 +181,16 @@
       "required": false
     }, 
     "DEFAULT_NAME": {
-      "description": "Klon plugininden sonra hesabınızın eski haline dönmesi için Telegram isminiz",
+      "description": "Klon pluginindən sonra hesabınızın köhnə halına dönməsi üçün Telegram adınız",
       "required": false
     }, 
     "DEFAULT_BIO": {
-      "description": "Varsayılan profil biyografisi.",
+      "description": "Varsayılan profil biosu.",
       "value": "@MiaUserBot",
       "required": false
     },
     "G_DRIVE_CLIENT_SECRET": {
-      "description": "Google Drive için client secret girin.",
+      "description": "Google Drive üçün client secret girin.",
       "required": false
     },
     "G_DRIVE_AUTH_TOKEN_DATA": {
