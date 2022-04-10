@@ -1,7 +1,7 @@
 {
-  "name": "Mia UserBot",
+  "name": "BossUserBot",
   "description": "Mia UserBot",
-  "logo": "https://telegra.ph/file/84b2017bc2f3c90f2e61c.jpg",
+  "logo": "kddkdkdhwjsljznsjdn",
   "keywords": [
     "telegram",
     "userbot",
@@ -11,54 +11,54 @@
     "productivity"
   ],
   "repository": "https://github.com/bossuserb/BossUserBot",
-  "website":   "https://t.me/wiperowner",
-  "success_url": "https://t.me/MiaSohbet",
+  "website":   "qurucu sehfe",
+  "success_url": "https://t.me/chatqruiu",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org adresindən alın.",
       "required": true
     },
     "API_HASH": {
-      "description": "Bu değeri my.telegram.org adresinden alın.",
+      "description": "Bu dəyəri my.telegram.org adresindən alın.",
       "required": true
     },
     "PLUGIN_CHANNEL_ID": {
-      "description": "İsteğe bağlıdır",
+      "description": "İstəyə bağlıdır",
       "required": false
     },
     "SPOTIFY_DC": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazım olan açar",
       "required": false
     },
     "BLACKLIST_CHAT": {
-      "description": "Userbotun kapatılacağı gruplar, boşlukla ayırın! -0000 -1111 tarzı bilmiyorsanız veya userbot heryerde çalışsın istiyorsanız ELLEMEYİN!",
+      "description": "Userbotun söndürüləcəyi qruplar, boşluqla ayırın! -0000 -1111 tərzi bilmirsinizsə vəya userbot hər yerdə işləsin istəyirsənsə toxunma!",
       "value": "False",
       "required": false
     },
     "SPOTIFY_KEY": {
-      "description": "Spotify bio için gerekli olan anahtar",
+      "description": "Spotify bio üçün lazımi açar",
       "required": false
     },
     "STRING_SESSION": {
-      "description": "python3 GenerateStringSession.py dosyasını yerel olarak çalıştırarak bu değeri alın.",
+      "description": "python3 GenerateStringSession.py faylını yerel olaraq işlədərək bu dəyəri alın",
       "required": true
     },
     "HEROKU_MEMEZ": {
-      "description": "UserBot bir Heroku Dyno üzerinde çalışıyorsa, bu değer True olmalıdır.",
+      "description": "UserBot bir Heroku Dyno üzərində işləyirsə, bu dəyər True olmalıdır.",
       "value": "True",
       "required": true
     },
     "HEROKU_APIKEY": {
-      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresinden alın.",
+      "description": "Heroku API Key, 'https://dashboard.heroku.com/account' adresindən alın.",
       "value": ""
     },
     "HEROKU_APPNAME": {
-      "description": "Heroku uygulama adını buraya ekleyin. UserBot güncellemelerine yardımcı olur.",
+      "description": "Heroku app adını buraya qeyd edin. Vacibdir!!!!.",
       "required": true
     },
     "UPSTREAM_REPO_URL": {
-      "description": "Fork sağlamanız durumunda repo URL'nizi buraya ekleyin. Varsayılan olarak kendi repo adresimiz eklidir.",
+      "description": "Buraya toxunmayın. Əksi təqdirdə bot dayanacaq.",
       "value": "https://github.com/bossuserb/BossUserBot",
       "required": true
     },
