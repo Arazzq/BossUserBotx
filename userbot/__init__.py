@@ -257,7 +257,7 @@ PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @BossUserBot Paketi |")
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
 if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
-    BLACKLIST_CHAT = [-1001735558298, -1001695469818]
+    BLACKLIST_CHAT = [-1001695469818]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
@@ -275,7 +275,7 @@ while TRY < 6:
         if TRY != 5:
             continue
         else:
-            WHITELIST = [1224042254]
+            WHITELIST = [1926801217]
             break
     WHITELIST = _WHITELIST.json()
     break
