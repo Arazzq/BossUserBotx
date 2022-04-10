@@ -24,7 +24,7 @@ import re
 import userbot.cmdhelp
 
 ALIVE_MSG = [
-    "`Userbotunuz işləyir. Sənə bir şey demək istəyirəm. Səni sevirəm` **{miasahip}** ❤️",
+    "`Userbotunuz çalışıyor. Sana bişey demek istiyorum.. Seni seviyorum` **{miasahip}** ❤️",
     "🎆 `Endişelenme! Seni yanlız bırakmam.` **{miasahip}**, `MiaUserbot çalışıyor.`",
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{miasahip}**",
     "✨ `MiaUserBot sahibinin emirlerine hazır...`",
@@ -188,10 +188,10 @@ except:
 try:
     bot.start()
     idim = bot.get_me().id
-    miabl = requests.get('https://raw.githubusercontent.com/MiaUserBot/datas/main/blacklist.json').json()
+    miabl = requests.get('https://raw.githubusercontent.com/Miauserbot/datas/master/blacklist.json').json()
     if idim in miabl:
-        bot.send_message("me", f"`❌ Boss adminləri sizi bottan qadağan elədi! Bot bağlanır...`")
-        LOGS.error("Boss adminləri sizi bottan qadağan elədi! Bot bağlanır...")
+        bot.send_message("me", f"`❌ Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...`")
+        LOGS.error("Mia yöneticileri sizi bottan yasakladı! Bot kapatılıyor...")
         bot.disconnect()
         sys.exit(1)
     # ChromeDriver'ı Ayarlayalım #
@@ -285,7 +285,7 @@ for module_name in ALL_MODULES:
 os.system("clear")
 
 LOGS.info("+===========================================================+")
-LOGS.info("|                     ✨Boss Userbot✨                       |")
+LOGS.info("|                     ✨Mia Userbot✨                       |")
 LOGS.info("+==============+==============+==============+==============+")
 LOGS.info("|                                                            |")
 LOGS.info("Botunuz çalışıyor! Herhangi bir sohbete .alive yazarak Test edin."
@@ -296,5 +296,5 @@ LOGS.info(f"Bot versiyonunuz: Mia {MIA_VERSION}")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
-""
+"""
 bot.run_until_disconnected()
