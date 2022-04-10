@@ -1,6 +1,6 @@
 {
   "name": "BossUserBot",
-  "description": "Mia UserBot",
+  "description": "Boss UserBot",
   "logo": "kddkdkdhwjsljznsjdn",
   "keywords": [
     "telegram",
@@ -63,32 +63,32 @@
       "required": true
     },
     "COUNTRY": {
-      "description": "Ülkenizi .time ve .date komutlarında kullanılacak şekilde ayarlayın. Varsayılan olarak Türkiye ayarlanmıştır.",
-      "value": "Turkey",
+      "description": "Ölkənizi .time və .date əmrində istifadə etmək istədiyiniz kimi qeyd edin. Varsayılan olaraq Azərbaycan qeyd edilib.",
+      "value": "Azerbaijan",
       "required": false
     },
     "TZ_NUMBER": {
-      "description": "Ülkenizde birden fazla Saat Dilimi olması durumunda bu değeri değiştirin.",
+      "description": "Azərbaycanda bu sabitdir. Eğer türksense support grupumuza gel @bosssup.",
       "value": "1",
       "required": false
     },
     "TZ": {
-      "description": "Bunun ne işe yaradığı hakkında fikrin yoksa kurcalama :)",
-      "value": "Europe/Istanbul",
+      "description": "Bunun nə olduğu barədə məlumatın yoxdursa dəymə.Eğer türksense support grupumuza gel @bosssup :)",
+      "value": "Asia/Baku",
       "required": true  
     },
     "CHROME_DRIVER": {
-      "description": "Selenium tabanlı modüller için ChromeDriver konumu.",
+      "description": "Selenium tabanlı modullar üçün ChromeDriver məkanı.",
       "value": "/usr/bin/chromedriver",
       "required": false
     },
     "GOOGLE_CHROME_BIN": {
-      "description": "Selenium tabanlı modüller için Google Chrome (veya) Chromium binary konumu.",
+      "description": "Selenium tabanlı modullar üçün Google Chrome (vəya) Chromium binary məkanı.",
       "value": "/usr/bin/chromium-browser",
       "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
-      "description": "https://api.openweathermap.org/data/2.5/weather adresinden kendi APPID'inizi (API key) edinin.",
+      "description": "https://api.openweathermap.org/data/2.5/weather adresindən öz APPID'inizi (API key) əldə edin.",
       "required": false
     },
     "BOTLOG": {
