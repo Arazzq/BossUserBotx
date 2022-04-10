@@ -226,7 +226,7 @@
     },
     "PAKET_ISMI": {
       "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@MiaUserBot Paketi",
+      "value": "@BossUserBot Paketi",
       "required": false
     },
     "OTOMATIK_KATILMA": {
