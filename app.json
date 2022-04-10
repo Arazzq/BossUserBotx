@@ -210,23 +210,23 @@
       "value": "False"
     },
     "WARN_LIMIT": {
-      "description": "Kişiyi gmutelemek/gbanlamak için gerekli uyarı sayısı. Genellikle 3 kullanılır.",
+      "description": "İstifadəçini gmuteləmək/gbanlamaq üçün lazımi xəbərdarlıq sayı.",
       "value": "3",
       "required": false
     },
     "WARN_MODE": {
-      "description": "3 uyarıdan sonra gerçekleşecek olay. Sadece gmute ya da gban yazabilirsiniz. Aksi takdirde bot çalışmayabilir.",
-      "value": "gmute",
+      "description": "3 xəbərdarlıqdan sonra ediləcək əmr. Yalnız .gmute yada .gban yaza bilərsiniz. Əksi təqdirdə bot işləməz.",
+      "value": "gban",
       "required": false
     },
     "GALERI_SURE": {
-      "description": "Galeri plugini içindir. Profil fotoğrafları kaç saniye de bir değişsin?",
+      "description": "Qaleri plugini üçündür. Profil şəkilləri neçə saniyədə bir dəyişsin?",
       "value": "60",
       "required": false
     },
     "PAKET_ISMI": {
-      "description": "Dızla komutu paket ismini belirleyin. Paket ismi şöyle olacaktır: @KullanıcıAdın verdiğin değer 1",
-      "value": "@BossUserBot Paketi",
+      "description": "toxunmayın ",
+      "value": "@BossUserBot",
       "required": false
     },
     "OTOMATIK_KATILMA": {
