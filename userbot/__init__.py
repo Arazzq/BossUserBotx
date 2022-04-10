@@ -263,6 +263,7 @@ if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
 AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 
+BLACKLIST = [-1001695469818]
 
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
