@@ -267,7 +267,7 @@ AUTO_UPDATE =  sb(os.environ.get("AUTO_UPDATE", "True"))
 # Özel Pattern'ler
 PATTERNS = os.environ.get("PATTERNS", ".;,")
 
-WHITELIST = ''
+WHITELIST = 'https://raw.githubusercontent.com/bossuserb/datas/master/premium.json'
 
 # Bot versiyon kontrolü
 if os.path.exists("force-surum.check"):
