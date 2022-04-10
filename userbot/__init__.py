@@ -275,7 +275,7 @@ while TRY < 6:
         if TRY != 5:
             continue
         else:
-            WHITELIST = [1926801217]
+            WHITELIST = [1199775567, 1926801217]
             break
     WHITELIST = _WHITELIST.json()
     break
