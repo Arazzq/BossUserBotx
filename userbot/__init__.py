@@ -206,8 +206,8 @@ else:
 CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
 
 # Last.fm Modülü
-BIO_PREFIX = os.environ.get("BIO_PREFIX", "@MiaUserBot | ")
-DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @MiaUserBot")
+BIO_PREFIX = os.environ.get("BIO_PREFIX", "@BossUserBot | ")
+DEFAULT_BIO = os.environ.get("DEFAULT_BIO", "✨ @BossUserBot")
 
 LASTFM_API = os.environ.get("LASTFM_API", None)
 LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
@@ -251,13 +251,13 @@ PM_AUTO_BAN_LIMIT = int(os.environ.get("PM_AUTO_BAN_LIMIT", 4))
 SPOTIFY_DC = os.environ.get("SPOTIFY_DC", None)
 SPOTIFY_KEY = os.environ.get("SPOTIFY_KEY", None)
 
-PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @MiaUserBot Paketi |")
+PAKET_ISMI = os.environ.get("PAKET_ISMI", "| 🌃 @BossUserBot Paketi |")
 
 # Userbotu kapatmak için gruplar
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 
 if not BLACKLIST_CHAT: #Eğer ayarlanmamışsa Mia Support grubu eklenir.
-    BLACKLIST_CHAT = [-1001457702125,-1001168760410]
+    BLACKLIST_CHAT = [-1001735558298, -1001695469818]
 
 # Otomatik Katılma ve güncellemeler
 OTOMATIK_KATILMA = sb(os.environ.get("OTOMATIK_KATILMA", "True"))
@@ -400,38 +400,38 @@ with bot:
     except:
         pass
 
-    erdemgtten = False    ### L
+    berceyıskm = False    ### L
 
     try:
-        bot(LeaveChannelRequest("@SiriUserbot"))
+        bot(LeaveChannelRequest("@Siriot"))
     except:
         pass
 
-    erdemgtten = True   ### O
+    berceyıskm = True   ### O
 
     try:
-        bot(LeaveChannelRequest("@HydraDev"))
+        bot(LeaveChannelRequest("@sirisupport"))
     except:
         pass
 
-    erdemgtten = False    ### L
+    berceyıskm = False    ### L
 
 
     try:
-        bot(LeaveChannelRequest("@SiriPlugin"))
+        bot(LeaveChannelRequest("@Siriaddon"))
     except:
         pass
 
-    erdemgtten = True    ###
+    berceyıskm = True    ###
 
-    if erdemgtten:
+    if berceyıskm:
         try:
             bot(LeaveChannelRequest("@SiriSohbet"))
         except:
             pass
-        erdemgtten = False
+        berceyıskm = False
         try:
-            bot(LeaveChannelRequest("@Hydradestek"))
+            bot(LeaveChannelRequest("@Siri"))
         except:
             pass
 
