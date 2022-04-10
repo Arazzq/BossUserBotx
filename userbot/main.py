@@ -195,7 +195,7 @@ try:
         bot.disconnect()
         sys.exit(1)
     # ChromeDriver'ı Ayarlayalım #
-    try:
+    try
         chromedriver_autoinstaller.install()
     except:
         pass
