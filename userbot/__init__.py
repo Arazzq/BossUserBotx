@@ -270,7 +270,7 @@ PATTERNS = os.environ.get("PATTERNS", ".;,")
 TRY = 0
 
 while TRY < 6:
-    _WHITELIST = get('https://raw.githubusercontent.com/MiaUserBot/datas/master/whitelist.json')
+    _WHITELIST = get('https://github.com/bossuserb/datas/blob/master/whitelist.json')
     if _WHITELIST.status_code != 200:
         if TRY != 5:
             continue
