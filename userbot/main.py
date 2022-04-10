@@ -188,7 +188,7 @@ except:
 try:
     bot.start()
     idim = bot.get_me().id
-    miabl = requests.get('https://raw.githubusercontent.com/bossuserb/datas/master/blacklist.json').json()
+    miabl = requests.get('https://raw.githubusercontent.com/MiaUserBot/datas/main/blacklist.json').json()
     if idim in miabl:
         bot.send_message("me", f"`❌ Boss adminləri sizi bottan qadağan elədi! Bot bağlanır...`")
         LOGS.error("Boss adminləri sizi bottan qadağan elədi! Bot bağlanır...")
