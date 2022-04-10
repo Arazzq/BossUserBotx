@@ -24,7 +24,7 @@ import re
 import userbot.cmdhelp
 
 ALIVE_MSG = [
-    "`Userbotunuz çalışıyor. Sana bişey demek istiyorum.. Seni seviyorum` **{miasahip}** ❤️",
+    "`Userbotunuz işləyir. Sənə bir şey demək istəyirəm. Səni sevirəm` **{miasahip}** ❤️",
     "🎆 `Endişelenme! Seni yanlız bırakmam.` **{miasahip}**, `MiaUserbot çalışıyor.`",
     "`⛈️ Elimden gelenin en iyisini yapmaya hazırım`, **{miasahip}**",
     "✨ `MiaUserBot sahibinin emirlerine hazır...`",
