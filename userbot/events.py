@@ -1,4 +1,4 @@
-# Mia UserBot - Ч ⁪⁬⁮⁮
+# Boss UserBot - Ч ⁪⁬⁮⁮
 
 """ Olayları yönetmek için UserBot modülü.
  UserBot'un ana bileşenlerinden biri. """
@@ -82,7 +82,7 @@ def register(**args):
         async def wrapper(check):
             MiaVer = int(MIA_VERSION.split(".")[1])
             if ForceVer > MiaVer:
-                await check.edit(f"`🌈 Botu acilen güncellemen lazım! Bu sürüm artık kullanılamıyor..`\n\n__🥺 Sorunu çözmek için__ `.update now` __yazmalısın!__")
+                await check.edit(f"`🌈 Botu təcili güncəlləmən lazım! Bu versiya artıq İşlədilə bilməz..`\n\n__🥺 Xətayı həll etmək üçün__ `.update now` __yazmalısan!__")
                 return
 
             if not LOGSPAMMER:
@@ -99,17 +99,17 @@ def register(**args):
             if groups_only and not check.is_group:
                 if not notifyoff:
                     try:
-                        await check.edit("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene! `")
+                        await check.edit("`⛔ Bunun bir grup olduğunu düşünmürəm. Bu plugini bir qrupta sına! `")
                     except:
-                        await check.respond("`⛔ Bunun bir grup olduğunu sanmıyorum. Bu plugini bir grupta dene! `")
+                        await check.respond("`⛔ Bunun bir grup olduğunu düşünmürəm. Bu plugini bir qrupta sına! `")
                 return
 
             if replyneeded and not check.is_reply:
                 if not notifyoff:
                     try:
-                        await check.edit("`🤰🏻Plugini kullanabilmek için bir mesajı yanıtlamalısın!`")
+                        await check.edit("`🤰🏻Plugini işlədə bilmək üçün bir mesajı yanıtlamalısan!`")
                     except:
-                        await check.respond("`🤰🏻 Plugini kullanabilmek için bir mesajı yanıtlamalısın!`")
+                        await check.respond("`🤰🏻 Plugini işlədə bilmək üçün bir mesajı yanıtlamalısan!`")
                 return
 
             try:
@@ -130,38 +130,38 @@ def register(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     eventtext = str(check.text)
-                    text = "**≛『 USERBOT HATA RAPORU 』≛**\n"
-                    link = "[Mia Destek Grubuna](https://t.me/miaSupports)"
+                    text = "**≛『 BOSS ΣRROR 』≛**\n"
+                    link = "[Boss Support Qrupuna](https://t.me/bosssupportaz)"
                     if len(eventtext)<20:
-                        text += f"\n**🗒️ Şu yüzden:** {eventtext}\n"
-                    text += "\n✆ İsterseniz, bunu bildirebilirsiniz."
-                    text += f"- sadece bu mesajı {link} gönderin."
-                    text += "**Hata ve tarih haricinde hiçbir şey** kayıt edilmez.\n"
+                        text += f"\n**🗒️ Xəta səbəbi:** {eventtext}\n"
+                    text += "\n✆ İstərsəniz, bunu bildirə bilərsiniz."
+                    text += f"- sadəcə bu mesajı {link} göndərin."
+                    text += "**Xəta və tarix xaricində heçbir şey** qeyd edilmir.\n"
 
                     ftext = ""
                     ftext += "========== UYARI =========="
-                    ftext += "\nBu dosya sadece burada yüklendi,"
-                    ftext += "\nSadece hata ve tarih kısmını kaydettik,"
-                    ftext += "\nGizliliğinize saygı duyuyoruz,"
-                    ftext += "\nBurada herhangi bir gizli veri varsa"
-                    ftext += "\nBu hata raporu olmayabilir, kimse verilerinize ulaşamaz.\n"
-                    ftext += "--------USERBOT HATA GUNLUGU--------\n"
-                    ftext += "\n➢ Tarih: " + date
+                    ftext += "\nBu fayl sadəcə burada yükləndi,"
+                    ftext += "\nSadəcə Xəta və tarix qismini qeyd etdim,"
+                    ftext += "\nGizliliyinizə hörmət edirik,"
+                    ftext += "\nBurada hər hansı bir gizli data varsa"
+                    ftext += "\nBu xəta hesabatı olmaya bilər, kimsə datalarınızı götürə bilməz.\n"
+                    ftext += "--------BOSS XƏTA GÜNLÜYÜ--------\n"
+                    ftext += "\n➢ Tarix: " + date
                     ftext += "\n➢ Grup ID: " + str(check.chat_id)
-                    ftext += "\n➢ Gönderen kişinin ID: " + str(check.sender_id)
-                    ftext += "\n\n➢ Olay Tetikleyici:\n"
+                    ftext += "\n➢ Göndərən kişinin ID: " + str(check.sender_id)
+                    ftext += "\n\n➢ Hadisə tetikləyici:\n"
                     ftext += str(check.text)
-                    ftext += "\n\n➢ Hata metni:\n"
+                    ftext += "\n\n➢ Xəta mətni:\n"
                     ftext += str(sys.exc_info()[1])
-                    ftext += "\n\n➢ Bot versiyonu:\n"
+                    ftext += "\n\n➢ Bot versiyası:\n"
                     ftext += "{}".format(str(MIA_VERSION))
                     ftext += "\n\n\n➢ Geri izleme bilgisi: \n"
                     ftext += str(format_exc())
-                    ftext += "\n\n--------USERBOT HATA GUNLUGU BITIS--------"
+                    ftext += "\n\n--------USERBOT XƏTA GUNLÜYÜ BITIS--------"
 
                     command = "git log --pretty=format:\"%an: %s\" -7"
 
-                    ftext += "\n\n\nSon 7 Güncelleme:\n"
+                    ftext += "\n\n\nSon 7 Güncəlləmə:\n"
 
                     process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
@@ -178,7 +178,7 @@ def register(**args):
 
                     if LOGSPAMMER:
                         try:
-                            await check.edit("__🥺 Üzgünüm, UserBot bir hatayla karşılaştı.\n🐙 Hata raporu Botlog grubuna gönderildi.__")
+                            await check.edit("__🥺 Təəsüf ki, UserBot bir xətayla qarşılaştı.\n🐙 Xəta hesabatı Botlog grubuna göndəriildi.__")
                         except:
                             pass
                     await check.client.send_file(send_to,
