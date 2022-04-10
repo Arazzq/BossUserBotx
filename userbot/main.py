@@ -295,6 +295,6 @@ LOGS.info(f"Bot versiyonunuz: Mia {MIA_VERSION}")
 """
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
-else:s
+else:
 """
 bot.run_until_disconnected()
