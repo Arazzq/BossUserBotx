@@ -9,8 +9,8 @@
 nowtime=$(date)
 echo "
 MiaUserBot
-(C) @MiaUserBot
-Thx @DevsExpo.
+(C) @BossUserBot
+Thx @MiaUserBot
 Time : $nowtime
 "
 update_and_install_packages () {
@@ -38,7 +38,7 @@ ech_final () {
 =+---------------------------------------------------------+=
 Deployment Sucessfull.
 Docker Images Are Being Pushed, Please Wait.
-Thank You For Installing Mia.
+Thank You For Installing Boss.
 =+---------------------------------------------------------+=
     "
 }
