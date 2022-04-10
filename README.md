@@ -5,4 +5,4 @@
 ## Credit
 Teşekkürler;
 
-[Mia](https://github.com/Mia/MiaUserBot)
+[Mia](https://github.com/MiaUserBot)
